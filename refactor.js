@@ -1,7 +1,7 @@
 import { randomNumber, debounce } from './util.js';
 
 class Visualization {
-  constructor(canvas) {
+  constructor(canvas, linesToDraw) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.dots = Array.from({ length: 100 }, () => ({
@@ -13,7 +13,7 @@ class Visualization {
       x: null,
       y: null,
     };
-    this.linesToDraw = 3;
+    this.linesToDraw = linesToDraw;
     this.drawCanvas = this.drawCanvas.bind(this);
     this.onMove = this.onMove.bind(this);
 
@@ -70,4 +70,4 @@ const canvas = document.querySelector('canvas');
 canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight;
 
-new Visualization(canvas);
+new Visualization(canvas, 10);
