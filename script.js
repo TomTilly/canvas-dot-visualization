@@ -4,4 +4,4 @@ const canvas = document.querySelector('canvas');
 canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight;
 
-dotify(canvas, 100, 10);
+dotify(canvas, { numDots: 100, numLines: 10 });
