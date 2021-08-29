@@ -3,8 +3,8 @@ import { randomNumber, debounce } from './util.js';
 /**
  * Takes a canvas and draws a dot visualization on it
  * @param {Object} canvas - The canvas to draw on
- * @param {number} numDots - Number of dots to draw in visualization
- * @param {number} numLines - Number of lines to draw in visualization
+ * @param {number} numDots - Number of dots to draw
+ * @param {number} numLines - Number of lines to draw
  */
 function dotify(canvas, numDots, numLines) {
   const ctx = canvas.getContext('2d');
